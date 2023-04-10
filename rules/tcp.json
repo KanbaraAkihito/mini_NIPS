@@ -1,0 +1,16 @@
+{	
+  "tcp_flood": {
+    "r_id": "400",
+    "level": "1",
+    "regex": "^S$",
+    "regex_not": "0",
+    "alert": "触发规则ID:400,疑似TCP-Flood攻击，短时间内过多的syn请求",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",  
+    "freq_num": "50",                
+    "freq_time": "10",   
+    "freq_noalert": "600",  
+    "check_info": "TCP-flood"
+  }
+}

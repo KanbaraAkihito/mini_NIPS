@@ -1,0 +1,30 @@
+{
+  "http_multi404": {
+    "r_id": "1",
+    "level": "5",
+    "regex": "http/1.1\\s*404\\s*not\\s*found",
+    "regex_not": "0",
+    "alert": "触发规则ID:1,连续出现404响应，疑似扫描",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "5",                
+    "freq_time": "20",   
+    "freq_noalert": "60",            
+    "check_info": "404扫描规则"
+  },
+	"http_caidao-2": {
+		"r_id": "14",
+		"level": "5",
+		"regex": "->\\|[\\s\\S]+\\|<-",
+		"regex_not": "0",
+		"alert": "触发规则ID:14,疑似中国菜刀流量",
+		"do_alert": "1",
+		"match_id": "13", 
+		"match_time": "10",  
+    "freq_num": "1",                
+    "freq_time": "5",   
+    "freq_noalert": "10",  
+		"check_info": "中国菜刀-2"
+	}
+}

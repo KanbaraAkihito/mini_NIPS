@@ -1,0 +1,30 @@
+{	
+  "dns_tunnel": {
+    "r_id": "600",
+    "level": "5",
+    "regex": "^.{60,}$",
+    "regex_not": "0",
+    "alert": "触发规则ID:600,连续出现超长域名请求，疑似dns隧道通信流量",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",  
+    "freq_num": "5",                
+    "freq_time": "20",   
+    "freq_noalert": "180",  
+    "check_info": "dns-tunnel通信"
+  },
+  "dns_suspicious_type": {
+    "r_id": "601",
+    "level": "5",
+    "regex": "(^16$)|(^15$)|(^5$)|(^10$)",
+    "regex_not": "0",
+    "alert": "触发规则ID:601,连续出现可疑dns类型[TXT|MX|CNAME|NULL]请求",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",  
+    "freq_num": "5",                
+    "freq_time": "20",   
+    "freq_noalert": "180",  
+    "check_info": "可疑dns类型"
+  }
+}

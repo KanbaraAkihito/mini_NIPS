@@ -1,0 +1,30 @@
+{
+  "mysql_login_bf": {
+    "r_id": "200",
+    "level": "5",
+    "regex": "Access\\s+denied\\s+for\\s+user",
+    "regex_not": "0",
+    "alert": "触发规则ID:200,连续出现mysql失败登录，疑似mysql登录爆破",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "3",                
+    "freq_time": "20",   
+    "freq_noalert": "60",            
+    "check_info": "mysql登录爆破"
+  },
+  "mysql_sensitive_resp": {
+    "r_id": "201",
+    "level": "5",
+    "regex": "secure_file_priv",
+    "regex_not": "0",
+    "alert": "触发规则ID:201,mysql敏感响应",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "",                
+    "freq_time": "",   
+    "freq_noalert": "",            
+    "check_info": "mysql敏感响应"
+  }
+}

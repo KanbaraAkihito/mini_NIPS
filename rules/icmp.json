@@ -1,0 +1,30 @@
+{
+  "icmp_tunnel": {
+    "r_id": "100",
+    "level": "5",
+    "regex": ".{100,}",
+    "regex_not": "0",
+    "alert": "触发规则ID:100,连续出现异常大小icmp请求包，疑似icmp隧道",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "3",                
+    "freq_time": "20",   
+    "freq_noalert": "60",            
+    "check_info": "icmp隧道规则"
+  },
+	"icmp_ping": {
+    "r_id": "101",
+    "level": "5",
+    "regex": ".+",
+    "regex_not": "0",
+    "alert": "触发规则ID:101,连续出现多个icmp请求包，疑似icmp-ping攻击",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "3",                
+    "freq_time": "20",   
+    "freq_noalert": "60",            
+    "check_info": "死亡之ping规则"
+  }
+}

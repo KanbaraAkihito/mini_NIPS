@@ -1,0 +1,58 @@
+{
+  "redis_login_bf": {
+    "r_id": "500",
+    "level": "5",
+    "regex": "\\$\\d+[\\s\\S]+AUTH[\\s\\S]+\\$\\d+[\\s\\S]+\\d+",
+    "regex_not": "0",
+    "alert": "触发规则ID:500,连续出现redis登录，疑似redis登录爆破",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "5",                
+    "freq_time": "20",   
+    "freq_noalert": "60",            
+    "check_info": "redis登录爆破"
+  },
+  "redis_write_trojan": {
+    "r_id": "501",
+    "level": "5",
+    "regex": "\\$\\d+[\\s\\S]+set[\\s\\S]+\\$\\d+[\\s\\S]+\\S+[\\s\\S]+\\$\\d+[\\s\\S]+(eval|assert|system|shell_exec|passthru|preg_replace|call_user_func|call_user_func_array|file_get_contents|file_put_contents|\\$_post|\\$_get|\\$_request)[\\s\\S]+",
+    "regex_not": "0",
+    "alert": "触发规则ID:501,疑似redis写入php木马",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "",                
+    "freq_time": "",   
+    "freq_noalert": "",            
+    "check_info": "redis-php木马写入"
+  },
+  "redis_write_sshkey": {
+    "r_id": "502",
+    "level": "5",
+    "regex": "\\$\\d+[\\s\\S]+config[\\s\\S]+\\$\\d+[\\s\\S]+set[\\s\\S]+\\$\\d+[\\s\\S]+dir[\\s\\S]+\\$\\d+[\\s\\S]+/root/\\.ssh/",
+    "regex_not": "0",
+    "alert": "触发规则ID:502,疑似redis写入ssh公钥",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "",                
+    "freq_time": "",   
+    "freq_noalert": "",            
+    "check_info": "redis-ssh公钥写入"
+  },
+  "redis_write_crontab": {
+    "r_id": "503",
+    "level": "5",
+    "regex": "\\$\\d+[\\s\\S]+config[\\s\\S]+\\$\\d+[\\s\\S]+set[\\s\\S]+\\$\\d+[\\s\\S]+dir[\\s\\S]+\\$\\d+[\\s\\S]+/var/spool/cron",
+    "regex_not": "0",
+    "alert": "触发规则ID:503,疑似redis写入定时任务",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "",                
+    "freq_time": "",   
+    "freq_noalert": "",            
+    "check_info": "redis-定时任务写入"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "mysql_exception_query": {
+    "r_id": "202",
+    "level": "5",
+    "regex": "load_file|show.+global|into.+outfile|select.+@@plugin_dir|create.+function",
+    "regex_not": "0",
+    "alert": "触发规则ID:202,mysql敏感SQL执行",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "",                
+    "freq_time": "",   
+    "freq_noalert": "",            
+    "check_info": "mysql敏感SQL执行"
+  },
+  "mysql_exception_query-2": {
+    "r_id": "203",
+    "level": "5",
+    "regex": "select.+from.+(information_schema|mysql)\\.\\w+.*",
+    "regex_not": "0",
+    "alert": "触发规则ID:203,mysql敏感SQL查询-information_schema|mysql",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",                 
+    "freq_num": "",                
+    "freq_time": "",   
+    "freq_noalert": "0",            
+    "check_info": "mysql敏感SQL查询-information_schema|mysql，由于此类语句执行会触发三个包，所以加了阈值"
+  }
+}
