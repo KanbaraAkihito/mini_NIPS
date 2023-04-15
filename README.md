@@ -1,8 +1,8 @@
 # mini_NIPS
-用python写的一个nips，实现了较为完备的功能
+用python写的一个小型nips，实现了较为完备的基础功能。
 
 
-NIDS-帮助
+NIPS-帮助
 
 
 启动参数：
