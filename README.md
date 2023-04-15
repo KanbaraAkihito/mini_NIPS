@@ -55,3 +55,7 @@ freq_num，freq_time， freq_noalert必须都有值时，才会生效
 其中，白名单ip列表需要在第一次启动时进行初始化配置，被添加进白名单的ip将不受ips模块的限制
 
 
+
+
+
+详细的功能演示，请查看DEMO.pdf
