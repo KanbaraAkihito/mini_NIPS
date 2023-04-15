@@ -12,5 +12,19 @@
     "freq_time": "10",   
     "freq_noalert": "600",  
     "check_info": "TCP-flood"
+  },
+  "ajp_tomcat_CVE-2020-1938": {
+    "r_id": "401",
+    "level": "5",
+    "regex": "javax\\.servlet\\.include\\.request_uri.+javax\\.servlet\\.include\\.path_info.+javax\\.servlet\\.include\\.servlet_path",
+    "regex_not": "0",
+    "alert": "触发规则ID:401,疑似tomcat_CVE-2020-1938漏洞",
+    "do_alert": "1",
+    "match_id": "", 
+    "match_time": "",  
+    "freq_num": "",                
+    "freq_time": "",   
+    "freq_noalert": "",  
+    "check_info": "tomcat_CVE-2020-1938"
   }
 }
